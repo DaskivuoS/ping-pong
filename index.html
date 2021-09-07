@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ping-pong</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script src="script.js"></script>
+</head>
+<body onload="display()">
+	<div id="introduction">
+		This is a simple game of ping pong based on elementary javascript<br>
+		You are supposed to play against the computer<br>
+		You start the game by making the first move, please follow chronology as directed while customizing<br>
+		You need to allocate a specific angle of delivery<br>( only available in first service )<br>
+		There are no constraints. Have fun your way. Make the game easy or difficult, as you please...<br>
+		It is strictly a landscape-mode game but it is not enforced for interested people<br>
+		<button id="to_game" onclick="open_gamebox()">Go to game...</button>
+	</div>
+	<div id="gamebox">
+		<div id="score">0</div>
+		<div id="message"></div>
+		<div id="control">
+			<button id="hit"- onclick="shoot();starting_shot_style_ammendment()">Serve</button>
+			<button id="to_top" class="navigate" onclick="user_go_up()">&#x21E1</button>
+			<button id="to_bottom" class="navigate" onclick="user_go_down()">&#x21E3</button>
+			<button id="anticlockwise" class="angle" onclick="rotate_anticlockwise()">&#x21BA</button>
+			<button id="clockwise" class="angle" onclick="rotate_clockwise()">&#x21BB</button>
+			<div id="angle_visualizer">&#8608</div>
+			<table id="bat_size">
+				<tr class="user_bat_size">
+					<td><button class= "control_bat_size" onclick="increase_user_bat_size()">+</button></td>
+					<td class="identify_bat_size">Set Your Bat's Size</td>
+					<td><button class= "control_bat_size" onclick="decrease_user_bat_size()">-</button></td>
+				</tr>
+				<tr class="computer_bat_size">
+					<td><button class= "control_bat_size" onclick="increase_computer_bat_size()">+</button></td>
+					<td class="identify_bat_size">Set Opponent Bat's Size</td>
+					<td><button class= "control_bat_size" onclick="decrease_computer_bat_size()">-</button></td>
+				</tr>
+			</table>
+			<table id="ball_size">
+				<tr>
+					<td><button class="control_ball_size" onclick="increase_ball_size()">+</button></td>
+					<td class="identify_ball_size">Set the Ball's size</td>
+					<td><button class="control_ball_size" onclick="decrease_ball_size()">-</button></td>
+				</tr>
+			</table>
+		</div>
+		<div id="videobox"></div>
+	</div>
+	<div id="developer_utilities">
+		<button id="test" onclick="display()">Display videobox</button>
+		<div id="check" onclick="variable_content_viewer()">This presents the data of every variable to smoothen the process of development</div>
+		<div id="navigate_computer_bat">
+			<button id="computer_go_up" onclick="computer_go_up()">Computer's bat- take upwards</button>
+			<br>
+			<button id="computer_go_down" onclick="computer_go_down()">Computer's bat- take downwards</button>
+			<button id="move_ball" onclick="calculate_trajectory_basic_straight();display()">Move the ball to the next location</button>
+		</div>
+	</div>
+</body>
+</html>

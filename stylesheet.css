@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+/* Visbility sections are defined so as to identify the main places for tweaking display properties as one proceeds along
+   there are also divisions in a specific section as to which keys should be visible and which should not be
+   the visibility markers are highlighted throughout the script
+*/
+
+body,html
+{
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+/* -------------------------the following section defines the primary piece that one comes across when coming to the webpage */
+#introduction
+{
+	font-size: 200%;
+	text-align: left;
+	width: 80%;
+	font-family: 'Nova Square', cursive;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	color: seagreen;}
+#to_game
+{
+	font-size: 90%;
+	padding: 2%;
+	width: 40%;
+	font-family: 'Rampart One', cursive;
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 10%;
+	color: seagreen;
+	background-color: transparent;
+	border: 1px solid seagreen;
+	border-radius: 100px;
+	box-shadow: 0px 0px 50px seagreen;
+}
+#to_game:hover
+{
+	color: black;
+	background-color: seagreen;
+	box-shadow: 0px 0px 0px transparent;
+}
+/* ------------------------------------------------------------------------------------here we go on about with the controls */
+/* the section goes on with two parts, setup and gameplay */
+#gamebox
+{
+	display: none;
+}
+#control
+{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	z-index: 2; /* z-index is set to 2 */
+}
+#hit
+{
+	right: 10%;
+	bottom: 20%;
+	font-size: 200%;
+	color: white;
+	background-color: red;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	padding-right: 1%;
+	padding-left: 1%;
+	border-radius: 100px;
+	border: 1px solid white;
+	box-shadow: 0px 0px 20px white;
+	text-shadow: 0px 0px 5px black;
+	position: fixed;
+}
+#hit:hover
+{
+	background-color: darkred;
+}
+.navigate
+{
+	font-size: 500%;
+	color: seagreen;
+	background-color: transparent;
+	border: none;
+	text-shadow: 0px 0px 10px black;
+}
+#to_top
+{
+	left: 5%;
+	bottom: 25%;
+	position: fixed;
+}
+#to_bottom
+{
+	left: 5%;
+	bottom: 10%;
+	position: fixed;
+}
+.angle
+{
+	font-size: 400%;
+	color: seagreen;
+	background-color: transparent;
+	border: none;
+}
+#anticlockwise
+{
+	bottom: 20%;
+	left: 20%;
+	position: fixed;
+}
+#clockwise
+{
+	bottom: 20%;
+	left: 30%;
+	position: fixed;
+}
+#angle_visualizer
+{
+	font-size: 500%;
+	color: skyblue;
+	left: 25%;
+	bottom: 30%;
+	z-index: 2; /* z-index set at 2 */
+	position: fixed;
+}
+#bat_size
+{
+	width: 30%;
+	background-color: transparent;
+	top: 10%;
+	right: 10%;
+	position: fixed;
+}
+.identify_bat_size
+{
+	font-size: 150%;
+	background-color: transparent;
+	color: seagreen;
+	border: none;
+}
+.user_bat_size
+{
+	margin-bottom: 1%;
+}
+.computer_bat_size
+{
+	margin-top: 1%;
+}
+.control_bat_size
+{
+	font-size: 200%;
+	background-color: transparent;
+	border: none;
+	color: white;
+}
+.control_bat_size:hover
+{
+	color: skyblue;
+}
+#ball_size
+{
+	width: 20%;
+	background-color: transparent;
+	top: 40%;
+	right: 40%;
+	position: fixed;
+}
+.control_ball_size
+{
+	font-size: 300%;
+	background-color: transparent;
+	border: none;
+	color: white;
+}
+.control_ball_size:hover
+{
+	color: skyblue;
+}
+.identify_ball_size
+{
+	font-size: 150%;
+	color: seagreen;
+}
+#score
+{
+	color: white;
+	font-size: 200%;
+	font-family: 'Rampart One', cursive;
+	bottom: 10%;
+	right: 10%;
+	position: fixed;
+	z-index: 2; /* z-index is set to 2 */
+}
+#message
+{
+	color: seagreen;
+	font-size: 150%;
+	font-family: 'Nova Square', cursive;
+	bottom: 20%;
+	right: 20%;
+	position: fixed;
+	z-index: 2; /* z-index is set to 2 */
+}
+/* ---------------------------------------------------------------------------------------------now we focus upon the gamebox*/
+#videobox
+{
+	z-index: 1;
+}
+#row
+{
+	background-color: white;
+}
+#display_table
+{
+	background-color: transparent;
+	box-shadow: 0px 0px 50px lightblue;
+	border-collapse: collapse;
+	color: transparent;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -5%;
+}
+#gametab
+{
+	height: 20px;
+	width: 20px;
+}
+/*---------------------------------------------------testing purposes---------------------------------------------------------*/
+#test,#check
+{
+	width: 30%;
+	position: fixed;
+	right: 5%;
+	top: 40%;
+	color: blue;
+	background-color: white;
+}
+#check
+{
+	margin-top: 5%;
+}
+#navigate_computer_bat
+{
+	background-color: white;
+	color: seagreen;
+	top: 30%;
+	width: 20%;
+	left: 70%;
+	position: fixed;
+}
+#computer_go_up, #computer_go_down
+{
+	background-color: transparent;
+	border: none;
+	width: 100%;
+}
+#moveball
+{
+	top: 5%;
+	left: 5%;
+	position: fixed;
+}
+#developer_utilities
+{
+	display: none;
+}
